@@ -11,8 +11,8 @@ step for review and replay.
 
 ## Current status
 
-**Milestone 0 — Foundation.** The repository skeleton, tooling, CI workflow,
-and design documents exist. **No agent, sandbox, API, or database functionality
+**Milestone 0 — Foundation (complete).** The repository skeleton, tooling, CI
+workflow, and design documents exist. **No agent, sandbox, API, or database functionality
 is implemented yet.** See [docs/roadmap.md](docs/roadmap.md) for progress and
 the session handoff.
 

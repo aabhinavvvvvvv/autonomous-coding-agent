@@ -2,24 +2,26 @@
 
 ## Session handoff (read this first in a new chat)
 
-- **Last updated:** 2026-10-29
-- **Current milestone:** M0 — Foundation. Implemented and verified locally;
-  awaiting the user's review and commit approval.
-- **Repo state:** Git initialised on `main`; no commits yet; no remote.
-- **Next step:** after M0 is committed, ask whether to create a GitHub repo
-  (outward-facing — needs explicit approval), then plan M1 (sandbox runner).
+- **Last updated:** 2026-10-30
+- **Current milestone:** M0 — Foundation. Complete: committed, pushed, CI green.
+- **Repo state:** branch `main` tracks `origin` =
+  https://github.com/aabhinavvvvvvv/autonomous-coding-agent (public).
+- **Next step:** plan M1 (sandbox runner) — explain concepts and design, agree
+  acceptance criteria, then implement. Do not start M1 without user approval.
 - **Environment notes:** run all tooling inside WSL (see docs/development.md).
   Docker Desktop is reachable from WSL; see docs/security.md for verified
   seccomp/cgroup observations.
 - **Open decisions:** model provider and API key (needed by M3; tests use a
-  fake provider); GitHub repo name and visibility.
+  fake provider).
+- **Follow-ups:** CI warns that `actions/checkout@v4` and `astral-sh/setup-uv@v6`
+  target the deprecated Node.js 20 runtime; bump to current major versions.
 
 ## Milestones
 
 Each milestone ends with: checks passing, diff review, secret scan, docs
 updated, and a commit after user approval.
 
-### M0 — Foundation ✅ (pending commit)
+### M0 — Foundation ✅
 
 - Git, `.gitignore`, `.gitattributes`, `.env.example`.
 - uv project, ruff (with security rules), strict mypy, pytest.
@@ -31,7 +33,8 @@ inside WSL. CI passes on GitHub once a remote exists.
 
 **Verified 2026-10-29:** all four local checks pass (9 tests). The structure
 test was shown to fail when a component's docstring is removed.
-**Not yet verified:** the CI workflow has not run (no GitHub remote).
+**Verified 2026-10-30:** CI run 41044049927 on GitHub passed the same four
+checks (9 tests) on commit `2f81608`.
 
 ### M1 — Sandbox runner (next)
 
