@@ -1,0 +1,4 @@
+# Normalize line endings to LF. This repo is edited from Windows (VS Code over
+# \\wsl.localhost) and Linux (WSL, CI, sandbox containers); CRLF would cause
+# spurious diffs and break shell scripts executed inside Linux containers.
+* text=auto eol=lf
